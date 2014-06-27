@@ -9,7 +9,7 @@
 #pragma warning(disable:4996)
 
 
-// color상수 지정 
+// color
 #define BLACK 0 
 #define BLUE 1 
 #define GREEN 2 
@@ -30,9 +30,9 @@
 #define HIDDEN 10
 #define TWINKLE 11
 
-int isLeapYear(int);                // 윤년 검사 함수
-int dayOfWeek(int, int, int);       // 요일 반환 함수
-static int daysOfMonth(int, int);   // 일수 반환 함수
+int isLeapYear(int);               
+int dayOfWeek(int, int, int);       
+static int daysOfMonth(int, int);   
 
 int currentTime();
 int currentYear();
@@ -121,7 +121,7 @@ static int daysOfMonth(int year, int month) {
 
 	month -= 1;
 
-	if (month == 1) {   // 2월달일때만 윤년 검사
+	if (month == 1) {   
 		if (isLeapYear(year)) {
 			return daysOfNormalYearMonth[month] + 1;
 		}
@@ -219,12 +219,12 @@ void traceTextColor(int year, int month, int day) {
 }
 
 
-void textColor(int foreground) { // foreground: 글자색
+void textColor(int foreground) { // foreground:
 	int color = foreground + BLACK * 16;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
 
-void textColor(int foreground, int background) { // foreground: 글자색, background: 배경색
+void textColor(int foreground, int background) { // foreground:, background: 
 	int color = foreground + background * 16;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
 }
@@ -235,7 +235,7 @@ void gotoXY(int x, int y) {
 }
 
 int currentTime() {
-	// 중복되는 부분을 처리하려 했으나 생략함
+	
 	return 0;
 }
 
